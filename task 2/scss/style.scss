@@ -1,0 +1,27 @@
+@import 'variables';
+@import 'faq';
+@import 'documents';
+@import 'footer';
+
+body,
+html {
+  font-family: Roboto;
+  font-weight: $font-normal;
+}
+
+.header-text {
+  margin: 15px;
+
+  @media screen and (min-width: 992px) {
+    margin-right: 150px;
+  }
+}
+
+.red-background {
+  background-color: $red;
+  min-height: $header-height;
+}
+
+.section-main {
+  overflow: hidden;
+}

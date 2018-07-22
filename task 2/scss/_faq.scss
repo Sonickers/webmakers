@@ -1,0 +1,161 @@
+.faq {
+  &__title {
+    margin-bottom: 4rem;
+    position: relative;
+
+    &-top {
+      font-weight: $font-bold;
+      font-size: 150px;
+      color: #eeeeee;
+    }
+
+    &-bottom {
+      font-weight: $font-normal;
+      position: absolute;
+      font-size: 32px;
+      top: 94px;
+      width: 100%;
+      text-align: center;
+    }
+
+    @media screen and (min-width: 768px) {
+      margin-bottom: 3rem;
+      position: initial;
+
+      &-bottom {
+        font-size: 50px;
+        top: 108px;
+        left: 89px;
+        width: auto;
+      }
+    }
+  }
+
+  &__list {
+    list-style: none;
+    padding: 0;
+    width: 680px;
+    max-width: 100%;
+
+    li {
+      display: block;
+      position: relative;
+
+      &:before,
+      &:after {
+        position: absolute;
+        background-color: $grey-lightest;
+        height: 100%;
+        width: 3000px;
+        top: 0;
+      }
+
+      &:before {
+        right: 100%;
+      }
+
+      &:after {
+        left: 100%;
+        z-index: -1;
+      }
+
+      &[aria-expanded='false'] {
+        &:hover {
+          background-color: $red;
+
+          &:before,
+          &:after {
+            display: block;
+            content: ' ';
+            background-color: $red;
+          }
+
+          .faq__list-item,
+          .icon i {
+            color: white;
+          }
+        }
+      }
+
+      &[aria-expanded='true'] {
+        background-color: $grey-lightest;
+
+        &:before,
+        &:after {
+          display: block;
+          content: ' ';
+        }
+      }
+    }
+
+    &-item {
+      color: $grey;
+      display: flex;
+      padding: 10px 0;
+      cursor: pointer;
+
+      .number,
+      .question,
+      .icon {
+        padding: 2px 20px;
+      }
+
+      .number {
+        padding-left: 0;
+        border-right: 1px solid $grey-light;
+        font-size: 24px;
+        font-weight: $font-thin;
+        line-height: 1;
+        max-height: 30px;
+
+        [aria-expanded='true'] & {
+          color: $red;
+          font-weight: $font-semi-bold;
+        }
+      }
+
+      .question {
+        flex: 1 1 0;
+        font-size: 18px;
+
+        &-title {
+          [aria-expanded='true'] & {
+            color: $black;
+            font-weight: $font-semi-bold;
+          }
+        }
+
+        &-content {
+          cursor: text;
+
+          [aria-expanded='true'] & {
+            padding: 20px 0 10px;
+          }
+        }
+      }
+
+      .icon {
+        padding-right: 0;
+
+        > i {
+          color: $red;
+          border: 2px solid;
+          border-radius: 50%;
+          padding: 2.5px 3px;
+
+          &:before {
+            content: '\f078';
+          }
+
+          [aria-expanded='true'] & {
+            color: $black;
+
+            &:before {
+              content: '\f077';
+            }
+          }
+        }
+      }
+    }
+  }
+}

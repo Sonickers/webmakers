@@ -1,0 +1,122 @@
+body {
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+  overflow-x: hidden;
+}
+
+.thin-font {
+  font-weight: 100;
+}
+
+.section-1,
+.header-nav {
+  background-color: #282828;
+  color: white;
+}
+
+.navbar-brand {
+  background-color: #282828;
+}
+
+.dot-orange {
+  color: #ff6131;
+}
+
+.font-bold {
+  font-weight: 900;
+}
+
+.navbar-brand {
+  font-size: 45px;
+}
+
+.letter-spacing {
+  letter-spacing: -3px;
+}
+
+.simple-text {
+  font-weight: bold;
+}
+
+.simple-text,
+.more-text {
+  line-height: 1;
+  font-size: 5rem;
+}
+
+@media screen and (min-width: 992px) {
+  .simple-text,
+  .more-text {
+    font-size: 100px;
+  }
+}
+
+.befree-text {
+  font-size: 40px;
+  margin-top: 30px;
+}
+
+.sec-1-img {
+  margin-bottom: -210px;
+  margin-right: -22px;
+}
+
+.sec1-p-text {
+  margin-top: 28px;
+  max-width: 600px;
+  padding-right: 80px;
+}
+
+.sec2-p-text {
+  font-size: 18px;
+}
+
+.img-phone {
+  margin-left: 44px;
+}
+
+.whatwedo-text {
+  color: #4e4e4e;
+  font-size: 36px;
+}
+
+.tab-what {
+  max-height: 245px;
+  width: 155px;
+}
+
+.icon {
+  font-size: 50px;
+  color: white;
+  width: 94px;
+  text-align: center;
+}
+
+.icon-background {
+  background-color: #ff6131;
+  height: 150px;
+  display: flex;
+  align-items: center;
+}
+
+.text-inside {
+  padding-top: 30px;
+  padding-left: 16px;
+  display: block;
+  justify-content: center;
+}
+
+.nav-item {
+  margin-left: 10px;
+}
+
+.tab-body {
+  font-size: 15px;
+  color: #4e4e4e;
+}
+
+.tab-title {
+  font-size: 20px;
+  color: #4e4e4e;
+  font-weight: 900;
+}

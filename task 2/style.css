@@ -1,0 +1,162 @@
+.faq__title {
+  margin-bottom: 4rem;
+  position: relative; }
+  .faq__title-top {
+    font-weight: 700;
+    font-size: 150px;
+    color: #eeeeee; }
+  .faq__title-bottom {
+    font-weight: 300;
+    position: absolute;
+    font-size: 32px;
+    top: 94px;
+    width: 100%;
+    text-align: center; }
+  @media screen and (min-width: 768px) {
+    .faq__title {
+      margin-bottom: 3rem;
+      position: initial; }
+      .faq__title-bottom {
+        font-size: 50px;
+        top: 108px;
+        left: 89px;
+        width: auto; } }
+
+.faq__list {
+  list-style: none;
+  padding: 0;
+  width: 680px;
+  max-width: 100%; }
+  .faq__list li {
+    display: block;
+    position: relative; }
+    .faq__list li:before, .faq__list li:after {
+      position: absolute;
+      background-color: #f6f6f6;
+      height: 100%;
+      width: 3000px;
+      top: 0; }
+    .faq__list li:before {
+      right: 100%; }
+    .faq__list li:after {
+      left: 100%;
+      z-index: -1; }
+    .faq__list li[aria-expanded='false']:hover {
+      background-color: #ec1c24; }
+      .faq__list li[aria-expanded='false']:hover:before, .faq__list li[aria-expanded='false']:hover:after {
+        display: block;
+        content: ' ';
+        background-color: #ec1c24; }
+      .faq__list li[aria-expanded='false']:hover .faq__list-item,
+      .faq__list li[aria-expanded='false']:hover .icon i {
+        color: white; }
+    .faq__list li[aria-expanded='true'] {
+      background-color: #f6f6f6; }
+      .faq__list li[aria-expanded='true']:before, .faq__list li[aria-expanded='true']:after {
+        display: block;
+        content: ' '; }
+  .faq__list-item {
+    color: #656565;
+    display: flex;
+    padding: 10px 0;
+    cursor: pointer; }
+    .faq__list-item .number,
+    .faq__list-item .question,
+    .faq__list-item .icon {
+      padding: 2px 20px; }
+    .faq__list-item .number {
+      padding-left: 0;
+      border-right: 1px solid #ddd;
+      font-size: 24px;
+      font-weight: 100;
+      line-height: 1;
+      max-height: 30px; }
+      [aria-expanded='true'] .faq__list-item .number {
+        color: #ec1c24;
+        font-weight: 400; }
+    .faq__list-item .question {
+      flex: 1 1 0;
+      font-size: 18px; }
+      [aria-expanded='true'] .faq__list-item .question-title {
+        color: #333;
+        font-weight: 400; }
+      .faq__list-item .question-content {
+        cursor: text; }
+        [aria-expanded='true'] .faq__list-item .question-content {
+          padding: 20px 0 10px; }
+    .faq__list-item .icon {
+      padding-right: 0; }
+      .faq__list-item .icon > i {
+        color: #ec1c24;
+        border: 2px solid;
+        border-radius: 50%;
+        padding: 2.5px 3px; }
+        .faq__list-item .icon > i:before {
+          content: '\f078'; }
+        [aria-expanded='true'] .faq__list-item .icon > i {
+          color: #333; }
+          [aria-expanded='true'] .faq__list-item .icon > i:before {
+            content: '\f077'; }
+
+.documents {
+  color: white;
+  padding: 30px;
+  position: relative; }
+  .documents, .documents:before {
+    background: black;
+    border-top-left-radius: 24px; }
+  .documents:before {
+    display: block;
+    content: ' ';
+    position: absolute;
+    height: 3000px;
+    width: 3000px;
+    top: 0;
+    left: 0;
+    z-index: -1; }
+  .documents__heading {
+    margin-bottom: 35px; }
+    .documents__heading-top {
+      font-weight: 300; }
+    .documents__heading-bottom {
+      font-weight: 100;
+      margin-top: 0; }
+  .documents__list {
+    list-style: none;
+    padding: 0;
+    width: 360px;
+    max-width: 100%; }
+    .documents__list-item {
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 16px;
+      border-bottom: 1px solid #444;
+      padding: 10px 0; }
+      .documents__list-item .icon {
+        font-size: 20px; }
+      .documents__list-item:hover .icon {
+        color: #ec1c24; }
+
+footer {
+  height: 375px;
+  background-color: #ebebeb; }
+
+body,
+html {
+  font-family: Roboto;
+  font-weight: 300; }
+
+.header-text {
+  margin: 15px; }
+  @media screen and (min-width: 992px) {
+    .header-text {
+      margin-right: 150px; } }
+
+.red-background {
+  background-color: #ec1c24;
+  min-height: 80px; }
+
+.section-main {
+  overflow: hidden; }
